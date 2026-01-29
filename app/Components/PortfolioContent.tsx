@@ -1,7 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useTheme } from "./theme/ThemeContext";
 
 const PortfolioContent = () => {
+  const { theme } = useTheme();
+
   const items = [
     {
       id: 1,
@@ -32,11 +37,11 @@ const PortfolioContent = () => {
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="border-[#dddddd] border rounded-xl p-4 w-full max-w-110 transition-all duration-300 hover:shadow-lg hover:shadow-gray-300"
+          className="border-[#ddd] border rounded-xl p-4 w-full max-w-110 transition-all duration-300 hover:shadow-lg hover:shadow-gray-300"
         >
           <div className="relative aspect-video overflow-hidden rounded-lg">
             <Image
-              src={item.image.light}
+              src={theme === "dark" ? item.image.dark : item.image.light}
               alt={item.name}
               fill
               loading="eager"

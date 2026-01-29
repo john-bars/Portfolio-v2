@@ -1,34 +1,53 @@
 @import "tailwindcss";
 
+/* Light mode defaults */
 :root {
   --background: transparent;
-  --foreground: #333333;
-
   --color-primary: #333333;
   --color-secondary: #757575;
-  /* --color-secondary: red; */
 
   --font-sans: "Proxima Nova Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-@theme {
+.dark {
+  --background: #1f2937; 
+  --color-primary: #ffffff; 
+  --color-secondary: #f9fafb; 
+}
+
+/* @theme {
   --color-primary: var(--color-primary);
   --color-secondary: var(--color-secondary);
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 @layer base {
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+
+  .bg-secondary { 
+    background-color: var(--color-secondary); 
+  }
+
   .heading-primary{ 
-    @apply text-primary font-bold leading-normal text-[80px] md:text-7xl  
+    @apply  font-bold leading-normal text-[80px] md:text-7xl;
+    color: var(--color-primary) !important;  
   }
 
   .heading-tertiary {
-    @apply text-2xl text-secondary
+    @apply text-2xl;
+    color: var(--color-secondary) !important;  
   }
 
   .section {
@@ -39,15 +58,5 @@ body {
     @apply mt-2 w-full border-b border-[#ddd] bg-transparent focus:outline-none
   }
 }
-
-
-
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
 
 

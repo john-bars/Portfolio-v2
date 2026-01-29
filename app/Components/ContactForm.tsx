@@ -64,10 +64,7 @@ export default function ContactForm() {
           />
         </label>
 
-        <button
-          type="submit"
-          className="bg-secondary text-white font-semibold px-6 py-3 rounded-xl hover:bg-primary transition-colors mt-3 justify-self-end cursor-pointer"
-        >
+        <button className="font-semibold bg-[#eee] hover:bg-[#ccc] hover:shadow-lg  border-[#ddd] dark:text-gray-800 px-6 py-3 rounded-xl mt-3 justify-self-end cursor-pointer text-primary">
           Send message
         </button>
       </div>

@@ -2,7 +2,7 @@ const AboutSection = () => {
   return (
     <section className="section grid">
       <div>
-        <h1 className="mb-2 font-bold text-4xl md:text-4xl lg:text-6xl tracking-tight">
+        <h1 className="text-primary mb-2 font-bold text-4xl md:text-4xl lg:text-6xl tracking-tight">
           John Bars Quipia
         </h1>
         <p className="text-secondary text-xl mb-6">JavaScript Developer</p>
