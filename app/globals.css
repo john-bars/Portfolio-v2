@@ -23,8 +23,20 @@ body {
 }
 
 @layer base {
-  h1{ 
-    @apply text-primary font-bold mb-2 text-[80px] md:text-8xl lg:text-[102px]
+  .heading-primary{ 
+    @apply text-primary font-bold leading-normal text-[80px] md:text-7xl  
+  }
+
+  .heading-tertiary {
+    @apply text-2xl text-secondary
+  }
+
+  .section {
+    @apply min-h-screen w-full px-8 md:px-16 xl:px-40 py-32
+  }
+
+  .input {
+    @apply mt-2 w-full border-b border-[#ddd] bg-transparent focus:outline-none
   }
 }
 

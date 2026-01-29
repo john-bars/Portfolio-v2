@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbars from "./Components/Navbars";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "John Bars Quipia - JavaScript Developer",
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body>
         <Navbars />
         {children}
+        <Toaster position="top-right" />
       </body>
     </html>
   );

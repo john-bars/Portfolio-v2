@@ -1,33 +1,13 @@
-import React from "react";
+import ContactForm from "./ContactForm";
 
 const ContactSection = () => {
   return (
-    <div>
-      <section className="py-10 border-b border-divider">
-        <div className="max-w-102.5 px-16">
-          <h1 className="text-5xl font-bold mb-2">contact.</h1>
-          <p className="text-secondary mb-6">
-            Get in touch with me via social media
-          </p>
-          <p className="text-primary">
-            I&apos;ve worked on this projects using Next.js, React, and Tailwind
-            for styling
-          </p>
-        </div>
-      </section>
-      <section className="py-10 border-b border-divider">
-        <div className="max-w-102.5 px-16">
-          <h1 className="text-3xl mb-2">Send me an email</h1>
-          <p className="text-secondary mb-6">
-            Get in touch with me via social media
-          </p>
-          <p className="text-primary">
-            I&apos;ve worked on this projects using Next.js, React, and Tailwind
-            for styling
-          </p>
-        </div>
-      </section>
-    </div>
+    <section className="section">
+      <h1 className="heading-primary">contact.</h1>
+      <h3 className="heading-tertiary pb-10">Send me an email</h3>
+      <hr className="border-[#dddddd] border-b" />
+      <ContactForm />
+    </section>
   );
 };
 
