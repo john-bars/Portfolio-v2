@@ -4,6 +4,7 @@ import Navbars from "./Components/Navbars";
 import { Toaster } from "react-hot-toast";
 import ThemeProvider from "./Components/theme/ThemeContext";
 import ThemeToggle from "./Components/theme/ThemeToggle";
+import ActiveSectionProvider from "./Components/context/activeSectionContext";
 
 export const metadata: Metadata = {
   title: "John Bars Quipia - JavaScript Developer",
@@ -20,10 +21,12 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider>
-          <Navbars />
-          {children}
-          <ThemeToggle />
-          <Toaster position="top-right" />
+          <ActiveSectionProvider>
+            <Navbars />
+            {children}
+            <ThemeToggle />
+            <Toaster position="top-right" />
+          </ActiveSectionProvider>
         </ThemeProvider>
       </body>
     </html>
