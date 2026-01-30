@@ -16,7 +16,8 @@ const PortfolioContent = () => {
         light: "/images/devflow_light.png",
         dark: "/images/devflow_dark.png",
       },
-      description: "A Stack Overflow–inspired Q&A platform for developers.",
+      description:
+        "It’s a full-stack, Stack Overflow–inspired Q&A platform featuring job API integration and AI-generated answers powered by OpenAI",
     },
     {
       id: 2,
@@ -37,7 +38,7 @@ const PortfolioContent = () => {
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="border-[#ddd] border rounded-xl p-4 w-full max-w-110 transition-all duration-300 hover:shadow-lg hover:shadow-gray-300"
+          className="group border-[#ddd] border rounded-xl p-4 w-full max-w-110 transition-all duration-300 hover:shadow-lg hover:shadow-gray-300 hover:scale-105"
         >
           <div className="relative aspect-video overflow-hidden rounded-lg">
             <Image
@@ -55,7 +56,7 @@ const PortfolioContent = () => {
           </div>
           <div className="pt-4">
             <h4 className="text-primary text-lg mb-1">{item.name}</h4>
-            <p className="text-secondary text-md line-clamp-1">
+            <p className="text-secondary text-md line-clamp-1 group-hover:line-clamp-3">
               {item.description}
             </p>
           </div>

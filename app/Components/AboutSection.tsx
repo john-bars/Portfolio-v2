@@ -1,6 +1,11 @@
+"use client";
+
+import { useSectionInView } from "./context/useSectionInView";
+
 const AboutSection = () => {
+  const ref = useSectionInView("about");
   return (
-    <section className="section grid">
+    <section id="about" ref={ref} className="section grid">
       <div>
         <h1 className="text-primary mb-2 font-bold text-4xl md:text-4xl lg:text-6xl tracking-tight">
           John Bars Quipia

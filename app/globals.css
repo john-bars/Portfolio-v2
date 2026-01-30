@@ -9,10 +9,14 @@
   --font-sans: "Proxima Nova Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .dark {
   --background: #1f2937; 
   --color-primary: #ffffff; 
-  --color-secondary: #f9fafb; 
+  --color-secondary: #9ca3af; 
 }
 
 /* @theme {
@@ -38,6 +42,10 @@ body {
 
   .bg-secondary { 
     background-color: var(--color-secondary); 
+  }
+
+  .bg-primary {
+    background-color: var(--color-primary); 
   }
 
   .heading-primary{ 

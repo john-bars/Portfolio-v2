@@ -1,7 +1,13 @@
+"use client";
+
+import { useSectionInView } from "./context/useSectionInView";
 import PortfolioContent from "./PortfolioContent";
+
 const PortfolioSection = () => {
+  const ref = useSectionInView("portfolio");
+
   return (
-    <section className="section ">
+    <section id="portfolio" ref={ref} className="section ">
       <div className="mb-16 md:mb-10 lg:mb-20">
         <h1 className="heading-primary">portfolio.</h1>
         <h3 className="heading-tertiary">
