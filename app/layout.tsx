@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 import ThemeProvider from "./Components/theme/ThemeContext";
 import ThemeToggle from "./Components/theme/ThemeToggle";
 import ActiveSectionProvider from "./Components/context/activeSectionContext";
+import GithubIcon from "./Components/GithubIcon";
 
 export const metadata: Metadata = {
   title: "John Bars Quipia - JavaScript Developer",
@@ -25,6 +26,7 @@ export default function RootLayout({
             <Navbars />
             {children}
             <ThemeToggle />
+            <GithubIcon />
             <Toaster position="top-right" />
           </ActiveSectionProvider>
         </ThemeProvider>
