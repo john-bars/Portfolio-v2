@@ -1,11 +1,11 @@
 "use client";
 
+import DescriptionIcon from "@mui/icons-material/Description";
 import Link from "next/link";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import { useTheme } from "./theme/ThemeContext";
 import { usePathname } from "next/navigation";
+import { useTheme } from "./theme/ThemeContext";
 
-const GithubIcon = () => {
+const ResumeIcon = () => {
   const { theme } = useTheme();
   const pathname = usePathname();
   const hide = pathname === "/resume";
@@ -16,9 +16,9 @@ const GithubIcon = () => {
           href="https://github.com/john-bars"
           target="_blank"
           rel="noreferrer noopener"
-          className="fixed bottom-8 left-16 md:hidden"
+          className="fixed bottom-8 left-24 md:hidden"
         >
-          <GitHubIcon
+          <DescriptionIcon
             sx={{ fontSize: { sm: 20 } }}
             className={`opacity-70 ${theme === "dark" && "text-white"}`}
           />
@@ -28,4 +28,4 @@ const GithubIcon = () => {
   );
 };
 
-export default GithubIcon;
+export default ResumeIcon;

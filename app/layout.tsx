@@ -6,6 +6,7 @@ import ThemeProvider from "./Components/theme/ThemeContext";
 import ThemeToggle from "./Components/theme/ThemeToggle";
 import ActiveSectionProvider from "./Components/context/activeSectionContext";
 import GithubIcon from "./Components/GithubIcon";
+import ResumeIcon from "./Components/ResumeIcon";
 
 export const metadata: Metadata = {
   title: "John Bars Quipia - JavaScript Developer",
@@ -27,6 +28,7 @@ export default function RootLayout({
             {children}
             <ThemeToggle />
             <GithubIcon />
+            <ResumeIcon />
             <Toaster position="top-right" />
           </ActiveSectionProvider>
         </ThemeProvider>
