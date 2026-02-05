@@ -36,10 +36,10 @@ export default function ResumePage() {
       <section className="mb-6 mt-3">
         <h2 className="mb-2 text-lg font-semibold">Profile</h2>
         <p className="leading-relaxed text-gray-700">
-          Frontend-focused developer with experience building responsive and
-          accessible web applications using React, Next.js, and TypeScript.
-          Passionate about creating clean UI, maintainable code, and scalable,
-          user-focused solutions.
+          Aspiring full-stack developer with experience building responsive web
+          applications using React, Next.js, and TypeScript. Interested in
+          creating clean, scalable, and user-focused solutions across the entire
+          stack.
         </p>
       </section>
 
