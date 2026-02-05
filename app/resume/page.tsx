@@ -2,29 +2,38 @@ export default function ResumePage() {
   return (
     <main className="mx-auto max-w-3xl bg-white px-6 py-10 text-sm text-gray-900 print:px-0 print:py-0">
       {/* Header */}
-      <header className="mb-8">
+      <header className="flex flex-col items-center ">
         <h1 className="text-3xl font-bold">John Bars Quipia</h1>
-        <p className="mt-1 font-medium text-gray-700">React Developer</p>
+        <p className="text-lg mt-1 font-medium text-gray-700">
+          React Developer
+        </p>
 
-        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-gray-600">
+        <div className="mt-2 flex flex-wrap justify-center items-center gap-x-2 gap-y-1 text-gray-600 text-center">
           <span>Makati City</span>
+          <span className="hidden sm:inline text-gray-400">|</span>
           <span>0998 597 2935</span>
-          <a href="mailto:john.barsq@gmail.com" className="underline">
+          <span className="hidden sm:inline text-gray-400">|</span>
+          <a
+            href="mailto:john.barsq@gmail.com"
+            className="text-gray-800 hover:text-gray-900 transition-colors"
+          >
             john.barsq@gmail.com
           </a>
+          <span className="hidden sm:inline text-gray-400">|</span>
           <a
             href="https://github.com/john-bars"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline"
+            className="text-gray-800 hover:text-gray-900 transition-colors"
           >
             github.com/john-bars
           </a>
         </div>
       </header>
+      <hr className="w-full mt-4 border-t border-gray-200" />
 
       {/* Profile */}
-      <section className="mb-6">
+      <section className="mb-6 mt-3">
         <h2 className="mb-2 text-lg font-semibold">Profile</h2>
         <p className="leading-relaxed text-gray-700">
           Frontend-focused developer with experience building responsive and
@@ -36,7 +45,7 @@ export default function ResumePage() {
 
       {/* Skills */}
       <section className="mb-6">
-        <h2 className="mb-2 text-lg font-semibold">Skills</h2>
+        <h2 className="mb-2 text-lg font-semibold tracking-wide">Skills</h2>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div>
@@ -69,19 +78,19 @@ export default function ResumePage() {
 
       {/* Projects */}
       <section className="mb-6">
-        <h2 className="mb-2 text-lg font-semibold">Projects</h2>
+        <h2 className="mb-2 text-lg font-semibold tracking-wide">Projects</h2>
 
         <div className="space-y-4">
           <div>
             <p className="font-medium">
-              Portfolio Website{" "}
+              Portfolio Website &ndash;
               <a
                 href="https://john-bars.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 italic hover:underline hover:text-blue-700 print:text-black"
+                className="ml-2 text-gray-800 hover:text-gray-900 transition-colors font-normal underline underline-offset-2"
               >
-                (john-bars.vercel.app)
+                john-bars.vercel.app
               </a>
             </p>
             <p className="text-gray-700">
@@ -92,21 +101,14 @@ export default function ResumePage() {
 
           <div>
             <p className="font-medium">
-              DevFlow{" "}
-              {/* <a
-                href="https://devflow-bars.vercel.app"
-                target="_blank"
-                className="text-gray-600 underline"
-              >
-                (https://devflow-bars.vercel.app)
-              </a> */}
+              DevFlow &ndash;
               <a
                 href="https://john-bars.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 italic hover:underline hover:text-blue-700 print:text-black"
+                className="ml-2 text-gray-800 hover:text-gray-900 transition-colors font-normal underline underline-offset-2"
               >
-                (devflow-bars.vercel.app)
+                devflow-bars.vercel.app
               </a>
             </p>
             <ul className="ml-4 list-disc text-gray-700">
@@ -129,7 +131,9 @@ export default function ResumePage() {
 
       {/* Experience */}
       <section className="mb-6">
-        <h2 className="mb-2 text-lg font-semibold">Work Experience</h2>
+        <h2 className="mb-2 text-lg font-semibold tracking-wide">
+          Work Experience
+        </h2>
 
         <div className="space-y-4">
           <div>
@@ -174,7 +178,7 @@ export default function ResumePage() {
 
       {/* Education */}
       <section>
-        <h2 className="mb-2 text-lg font-semibold">Education</h2>
+        <h2 className="mb-2 text-lg font-semibold tracking-wide">Education</h2>
 
         <p className="font-medium">Bicol University</p>
         <p className="text-gray-700">

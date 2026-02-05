@@ -5,13 +5,12 @@ import { useActiveSection } from "./context/activeSectionContext";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import DescriptionIcon from "@mui/icons-material/Description";
 import { usePathname } from "next/navigation";
-import { resume } from "react-dom/server";
 
 const Navbars = () => {
   const { section, setSection } = useActiveSection();
   const navItems = ["about", "portfolio", "contact"] as const;
   const pathname = usePathname();
-  const hide = pathname === "/resume";
+  const hide = pathname?.startsWith("/resume");
   return (
     <nav className="md:w-18 fixed top-8 bottom-8 right-8 z-50 flex flex-col justify-between">
       <Link
@@ -22,18 +21,21 @@ const Navbars = () => {
       </Link>
 
       <div className="flex flex-col md:gap-2 text-primary text-lg">
-        <Link
-          href="https://github.com/john-bars"
-          target="_blank"
-          rel="noreferrer noopener"
-          className="hidden md:block text-center hover:scale-110 transition-normal
+        {!hide && (
+          <Link
+            href="https://github.com/john-bars"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="hidden md:block text-center hover:scale-110 transition-normal
           duration-300 "
-        >
-          <GitHubIcon
-            sx={{ fontSize: { sm: 20 } }}
-            className="text-gray-500 hover:scale-125 cursor-pointer opacity-70 hover:opacity-100"
-          />
-        </Link>
+          >
+            <GitHubIcon
+              sx={{ fontSize: { sm: 20 } }}
+              className="text-gray-500 hover:scale-125 cursor-pointer opacity-70 hover:opacity-100"
+            />
+          </Link>
+        )}
+
         {!hide && (
           <Link
             href="/resume"
@@ -64,17 +66,18 @@ const Navbars = () => {
           ))}
       </div>
 
-      {navItems.map(
-        (item) =>
-          section === item && (
-            <div
-              key={item}
-              className="md:hidden text-secondary text-sm text-right transition-all transition-discrete ease-in duration-300 print:hidden"
-            >
-              {item}
-            </div>
-          ),
-      )}
+      {!hide &&
+        navItems.map(
+          (item) =>
+            section === item && (
+              <div
+                key={item}
+                className="md:hidden text-secondary text-sm text-right transition-all transition-discrete ease-in duration-300 print:hidden"
+              >
+                {item}
+              </div>
+            ),
+        )}
     </nav>
   );
 };
