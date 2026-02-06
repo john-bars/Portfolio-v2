@@ -158,9 +158,16 @@ export default function ResumePage() {
               Sales Executive — VPD Business Solutions Inc.
             </p>
             <p className="text-gray-600">Feb 2024 &ndash; May 2024</p>
-            <p className="text-gray-700">
-              Managed client accounts and handled sales operations.
-            </p>
+            <ul className="ml-4 list-disc text-gray-700">
+              <li>
+                Conducted product demos for the company&apos;s SaaS platform to
+                prospective clients.
+              </li>
+              <li>
+                Conducted usability testing on the SaaS platform and reported
+                findings to the development team.
+              </li>
+            </ul>
           </div>
 
           <div>
