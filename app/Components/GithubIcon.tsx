@@ -1,31 +1,30 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import { useTheme } from "./theme/ThemeContext";
-import { usePathname } from "next/navigation";
+import Link from 'next/link';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { useTheme } from './theme/ThemeContext';
+import { usePathname } from 'next/navigation';
 
-const GithubIcon = () => {
+const GithubLinkIcon = () => {
   const { theme } = useTheme();
   const pathname = usePathname();
-  const hide = pathname === "/resume";
+  const hide = pathname.startsWith('/resume');
+
+  if (hide) return null;
+
   return (
-    <>
-      {!hide && (
-        <Link
-          href="https://github.com/john-bars"
-          target="_blank"
-          rel="noreferrer noopener"
-          className="fixed bottom-8 left-16 md:hidden"
-        >
-          <GitHubIcon
-            sx={{ fontSize: { sm: 20 } }}
-            className={`opacity-70 ${theme === "dark" && "text-white"}`}
-          />
-        </Link>
-      )}
-    </>
+    <Link
+      href="https://github.com/john-bars"
+      target="_blank"
+      rel="noreferrer noopener"
+      className="fixed bottom-8 left-16 transition-opacity hover:opacity-100 md:hidden"
+    >
+      <GitHubIcon
+        sx={{ fontSize: { sm: 20 } }}
+        className={`opacity-70 transition-colors ${theme === 'dark' && 'text-white'}`}
+      />
+    </Link>
   );
 };
 
-export default GithubIcon;
+export default GithubLinkIcon;

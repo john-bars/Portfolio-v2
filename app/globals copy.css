@@ -1,0 +1,103 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #f4f4f5;
+  --foreground: #18181b;
+
+  --text-primary: #333333;
+  --text-secondary: #757575;
+
+  --card: #f4f4f4;
+  --border: rgb(0 0 0 / 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b0f17;
+    --foreground: #e5e7eb;
+
+    --text-primary: #e5e7eb;
+    --text-secondary: #9ca3af;
+
+    --card: #121826;
+    --border: rgb(255 255 255 / 0.1);
+  }
+}
+
+/* .dark {
+  --background: #0b0f17;
+  --foreground: #e5e7eb;
+
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+
+  --card: #121826;
+  --border: rgb(255 255 255 / 0.1);
+} */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-text: var(--text-primary);
+  --color-muted: var(--text-secondary);
+
+  --color-card: var(--card);
+  --color-border: var(--border);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* @layer base {
+  .text-primary {
+    color: var(--color-text);
+  }
+
+  .text-secondary {
+    color: var(--color-muted);
+  }
+
+  .bg-primary {
+    background-color: var(--color-background);
+  }
+
+  .bg-secondary {
+    background-color: var(--color-card);
+  }
+
+  .heading-primary {
+    @apply text-[80px] leading-normal font-bold md:text-7xl;
+    color: var(--color-text);
+  }
+
+  .heading-tertiary {
+    @apply text-2xl;
+    color: var(--color-muted);
+  }
+
+  .section {
+    @apply min-h-screen w-full px-8 py-32 md:px-16 xl:px-40;
+  }
+
+  .input {
+    @apply border-border mt-2 w-full border-b bg-transparent focus:outline-none;
+  }
+} */
+
+@media print {
+  body {
+    background: white;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}

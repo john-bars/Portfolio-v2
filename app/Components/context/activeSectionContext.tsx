@@ -1,11 +1,18 @@
-"use client";
+'use client';
 
-import { createContext, ReactNode, useContext, useState } from "react";
+import {
+  createContext,
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  useContext,
+  useState,
+} from 'react';
 
-type Section = "about" | "portfolio" | "contact";
+type Section = 'about' | 'portfolio' | 'contact';
 interface SectionContextType {
   section: Section;
-  setSection: (section: Section) => void;
+  setSection: Dispatch<SetStateAction<Section>>;
 }
 
 const ActiveSectionContext = createContext<SectionContextType | undefined>(
@@ -13,7 +20,7 @@ const ActiveSectionContext = createContext<SectionContextType | undefined>(
 );
 
 const ActiveSectionProvider = ({ children }: { children: ReactNode }) => {
-  const [section, setSection] = useState<Section>("about");
+  const [section, setSection] = useState<Section>('about');
   return (
     <ActiveSectionContext.Provider value={{ section, setSection }}>
       {children}
@@ -25,7 +32,7 @@ export const useActiveSection = () => {
   const context = useContext(ActiveSectionContext);
   if (!context) {
     throw new Error(
-      "useActiveSection must be used within ActiveSectionProvider",
+      'useActiveSection must be used within ActiveSectionProvider',
     );
   }
   return context;

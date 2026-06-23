@@ -1,6 +1,6 @@
-import AboutSection from "./Components/AboutSection";
-import PortfolioSection from "./Components/PortfolioSection";
-import ContactSection from "./Components/ContactSection";
+import AboutSection from './Components/AboutSection';
+import PortfolioSection from './Components/PortfolioSection';
+import ContactSection from './Components/ContactSection';
 
 export default function Home() {
   return (

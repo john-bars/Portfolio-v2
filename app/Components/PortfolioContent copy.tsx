@@ -17,7 +17,7 @@ const PortfolioContent = () => {
         dark: '/images/devflow_dark.png',
       },
       description:
-        'It’s a full-stack, Stack Overflow–inspired Q&A platform featuring job API integration and AI-generated answers powered by OpenAI.',
+        'It’s a full-stack, Stack Overflow–inspired Q&A platform featuring job API integration and AI-generated answers powered by OpenAI',
     },
     {
       id: 2,
@@ -38,7 +38,7 @@ const PortfolioContent = () => {
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="group border-secondary/30 w-full max-w-110 rounded-xl border p-4 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-gray-300 dark:hover:shadow-xs"
+          className="group border-border w-full max-w-110 rounded-xl border p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-gray-300 dark:hover:shadow-xs"
         >
           <div className="relative aspect-video overflow-hidden rounded-lg">
             <Image
@@ -46,18 +46,17 @@ const PortfolioContent = () => {
               alt={item.name}
               fill
               loading="eager"
-              sizes="(max-width: 640px) 100vw,(max-width: 1024px) 50vw, 33vw"
-              className="object-cover transition-transform duration-3000 group-hover:scale-105"
+              sizes="(max-width: 640px) 100vw,
+         (max-width: 1024px) 50vw,
+         33vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
 
             <div className="absolute inset-0 bg-black/3" />
           </div>
-          <div className="pt-8">
-            <h4 className="text-primary/85 text-md mb-1 font-semibold">
-              {item.name} <span className="text-xs opacity-50">↗</span>
-            </h4>
-
-            <p className="text-secondary line-clamp-1 h-16 text-sm transition-all group-hover:line-clamp-4">
+          <div className="pt-4">
+            <h4 className="text-primary mb-1 text-lg">{item.name}</h4>
+            <p className="text-secondary text-md line-clamp-1 group-hover:line-clamp-3">
               {item.description}
             </p>
           </div>

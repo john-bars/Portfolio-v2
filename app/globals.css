@@ -1,81 +1,45 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-/* Light mode defaults */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: transparent;
-  --color-primary: #333333;
-  --color-secondary: #757575;
+  --background: #f4f4f5;
+  --foreground: #18181b;
 
-  --font-sans: "Proxima Nova Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+  --text-primary: #333333;
+  --text-secondary: #757575;
 
-html {
-  scroll-behavior: smooth;
+  --card: #f4f4f4;
+  --border: rgb(0 0 0 / 0.15);
 }
 
 .dark {
-  --background: #1f2937; 
-  --color-primary: #ffffff; 
-  --color-secondary: #9ca3af; 
+  --background: #0b0f17;
+  --foreground: #e5e7eb;
+
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+
+  --card: #121826;
+  --border: rgb(255 255 255 / 0.1);
 }
 
-/* @theme {
-  --color-primary: var(--color-primary);
-  --color-secondary: var(--color-secondary);
-} */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+
+  --color-card: var(--card);
+  --color-border: var(--border);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
-  transition: background 0.3s ease, color 0.3s ease;
 }
-
-@layer base {
-  .text-primary {
-    color: var(--color-primary);
-  }
-
-  .text-secondary {
-    color: var(--color-secondary);
-  }
-
-  .bg-secondary { 
-    background-color: var(--color-secondary); 
-  }
-
-  .bg-primary {
-    background-color: var(--color-primary); 
-  }
-
-  .heading-primary{ 
-    @apply  font-bold leading-normal text-[80px] md:text-7xl;
-    color: var(--color-primary) !important;  
-  }
-
-  .heading-tertiary {
-    @apply text-2xl;
-    color: var(--color-secondary) !important;  
-  }
-
-  .section {
-    @apply min-h-screen w-full px-8 md:px-16 xl:px-40 py-32
-  }
-
-  .input {
-    @apply mt-2 w-full border-b border-[#ddd] bg-transparent focus:outline-none
-  }
-}
-
-@media print {
-  body {
-    background: white;
-  }
-
-  a {
-    color: black;
-    text-decoration: none;
-  }
-}
-
-

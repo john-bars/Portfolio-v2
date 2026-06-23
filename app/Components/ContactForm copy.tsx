@@ -33,9 +33,6 @@ export default function ContactForm() {
     }
   };
 
-  const inputStyle =
-    'border-border mt-2 w-full border-b bg-transparent text-primary transition focus:border-primary/40 focus:outline-none';
-
   return (
     <form
       onSubmit={handleSubmit}
@@ -44,34 +41,30 @@ export default function ContactForm() {
       <div className="flex flex-col gap-3 lg:w-full">
         <label className="text-secondary block">
           Name
-          <input type="text" name="name" className={inputStyle} />
+          <input type="text" name="name" className="input" />
         </label>
 
         <label className="text-secondary block">
           Email <span className="text-red-600">*</span>
-          <input type="email" name="email" required className={inputStyle} />
+          <input type="email" name="email" required className="input" />
         </label>
 
         <label className="text-secondary block">
           Subject
-          <input type="text" name="subject" className={inputStyle} />
+          <input type="text" name="subject" className="input" />
         </label>
       </div>
-
       <div className="grid lg:w-full">
         <label className="text-secondary block">
           Message <span className="text-red-600">*</span>
           <textarea
             name="message"
             required
-            className="border-border text-primary focus:border-primary/40 mt-2 h-28 w-full resize-none rounded-lg border bg-transparent px-3 py-2 transition focus:outline-none lg:h-40"
+            className="mt-2 h-28 w-full resize-none rounded-lg border border-[#ddd] bg-transparent px-3 py-2 focus:outline-none lg:h-40"
           />
         </label>
 
-        <button
-          type="submit"
-          className="text-primary/70 border-border hover:text-primary/95 mt-4 cursor-pointer justify-self-end rounded-xl border px-6 py-3 font-semibold transition hover:scale-105 hover:shadow-lg"
-        >
+        <button className="text-primary mt-3 cursor-pointer justify-self-end rounded-xl border-[#ddd] bg-[#eee] px-6 py-3 font-semibold hover:bg-[#ccc] hover:shadow-lg dark:text-gray-800">
           Send message
         </button>
       </div>
